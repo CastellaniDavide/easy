@@ -1,5 +1,5 @@
 /**
- * @file easy.cpp
+ * @file easy1.cpp
  *
  * @version 01.01 2020-10-19
  *
@@ -19,23 +19,28 @@
 using namespace std;
 
 // Variabiles
-int N;
+int N, temp;
+int max_value = INT_MIN;
 
 // Main code
 int main()
 {
   // Cncomment the following lines if you want to read/write from files
-  // freopen("input.txt", "r", stdin);
-  // freopen("output.txt", "w", stdout);
+  freopen("input3.txt", "r", stdin);
+  freopen("output3.txt", "w", stdout);
 
   // Input
   cin >> N;
 
-  // Code
-  // ...
+  for (size_t i = 0; i < N; ++i)
+  {
+      cin >> temp;
+      if (temp > max_value)
+        max_value = temp;
+  }
 
   // Output
-  cout << N << endl;
+  cout << max_value << endl;
 
   // End
   return 0;
